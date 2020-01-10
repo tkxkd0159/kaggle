@@ -1,0 +1,18 @@
+id
+idg
+position
+wave
+positin1
+partner
+field
+field_cd
+undergra
+mn_sat
+tuition
+from
+date
+go_out
+career(비어있는 행 삭제)
+exphappy
+expnum
+match_es
