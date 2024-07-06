@@ -6,5 +6,5 @@ source kgenv/bin/activate
 pip freeze > requirements.txt # optional
 pip install -r requirements.txt
 
-python -m unittest discover .
+python -m unittest discover . -v
 ```
