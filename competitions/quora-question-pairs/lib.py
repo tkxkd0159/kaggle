@@ -17,7 +17,7 @@ def clean_data(file_path, debug=False, save_path=None):
     if debug:
         dropped_rows = original_df[~original_df.index.isin(df.index)]
         print("Generate dropped rows")
-        dropped_rows.to_csv(path.join(save_path, "dropped_rows.csv"), index=True)
+        dropped_rows.to_csv(path.join(save_path, "missing_values.csv"), index=True)
 
     # Text Normalization
     def normalize_text(text):
