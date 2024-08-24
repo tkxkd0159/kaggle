@@ -9,3 +9,4 @@ dependencies:
   - python
   - scikit-learn
   - seaborn
+  - jupyterlab
