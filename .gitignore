@@ -1,3 +1,5 @@
+*.csv
+
 kgenv
 
 # Byte-compiled / optimized / DLL files
