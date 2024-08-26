@@ -42,7 +42,7 @@ def clean_data(file_path, debug=False, save_path=None):
             "normalized_question2",
         ]
         print("Generate text normalization comparisons...")
-        comparison_df.to_csv(path.join(save_path, "text_norm_cmp.csv"), index=True)
+        comparison_df.to_csv(path.join(save_path, "text_norm_cmp.csv"), index=False)
 
     # Removing Duplicate Rows
     original_df = df.copy()
@@ -51,7 +51,7 @@ def clean_data(file_path, debug=False, save_path=None):
     if debug:
         duplicate_rows = original_df[~original_df.index.isin(df.index)]
         print("Generate duplicate rows...")
-        duplicate_rows.to_csv(path.join(save_path, "duplicate_rows.csv"), index=True)
+        duplicate_rows.to_csv(path.join(save_path, "duplicate_rows.csv"), index=False)
 
     # Handling Outliers
     def is_outlier(text):
@@ -63,6 +63,6 @@ def clean_data(file_path, debug=False, save_path=None):
     if debug:
         outlier_rows = original_df[~original_df.index.isin(df.index)]
         print("Generate outlier rows...")
-        outlier_rows.to_csv(path.join(save_path, "outlier_rows.csv"), index=True)
+        outlier_rows.to_csv(path.join(save_path, "outlier_rows.csv"), index=False)
 
-    df.to_csv(path.join(save_path, "cleaned_train.csv"), index=True)
+    df.to_csv(path.join(save_path, "cleaned_train.csv"), index=False)
